@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-do List</h1>
+        <div class="form-grid">
+            <input type="text" id="taskName" placeholder="Task Name">
+            <input type="date" id="taskDeadline">
+            <select id="taskStatus">
+                <option value="Completed">Completed</option>
+                <option value="Pending">Pending</option>
+            </select>
+            <select id="taskPriority">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <button onclick="addTask()">Add Task</button>
+        </div>
+        <table id="todoTable">
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Deadline</th>
+                    <th>Status</th>
+                    <th>Priority</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dynamic rows will be added here -->
+            </tbody>
+        </table>
+        <button class="save-button" onclick="saveTasks()">Save Tasks</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
